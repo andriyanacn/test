@@ -23,16 +23,16 @@ var (
 )
 
 func initMigration() {
-	DB.AutoMigrate(&db.Admins{})
-	DB.AutoMigrate(&db.Advances{})
-	DB.AutoMigrate(&db.Audios{})
-	DB.AutoMigrate(&db.Batteries{})
-	DB.AutoMigrate(&db.Desains{})
-	DB.AutoMigrate(&db.Descs{})
-	DB.AutoMigrate(&db.Displays{})
-	DB.AutoMigrate(&db.Merks{})
-	DB.AutoMigrate(&db.Types{})
-	DB.AutoMigrate(&db.Performs{})
-	DB.AutoMigrate(&db.Cameras{})
-	DB.AutoMigrate(&db.Features{})
+	DB.AutoMigrate(&db.Admins{},
+		&db.Advances{},
+		&db.Audios{},
+		&db.Batteries{},
+		&db.Desains{},
+		&db.Descs{},
+		&db.Displays{},
+		&db.Merks{},
+		&db.Types{},
+		&db.Performs{},
+		&db.Cameras{},
+		&db.Features{})
 }
