@@ -1,6 +1,7 @@
 package route
 
 import (
+	"phone_review/constants"
 	"phone_review/controller"
 	"phone_review/middleware"
 	m "phone_review/middleware"
@@ -26,6 +27,7 @@ func New() *echo.Echo {
 	eAuthBasic.GET("/admins", controller.GetAdminsController)
 
 	eJwt := e.Group("/jwt")
+	eJwt.Use(midd.JWT([]byte(constants.SECRET_JWT)))
 	eJwt.GET("/admins", controller.GetAdminsController)
 
 	//CRUD MERK
